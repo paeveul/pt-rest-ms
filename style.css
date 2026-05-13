@@ -347,8 +347,8 @@ body {
 .hero-subtitle {
   font-family: 'Cormorant', serif;
   font-size: clamp(18px, 2vw, 24px);
-  font-weight: 300;
-  color: var(--color-text-muted);
+  font-weight: 400;
+  color: var(--color-gold-light);
   margin-bottom: 48px;
   opacity: 0;
   transform: translateY(16px);
