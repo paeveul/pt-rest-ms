@@ -57,7 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.style.overflow = '';
   };
 
-  hamburger?.addEventListener('click', openMenu);
+  hamburger?.addEventListener('click', () => {
+    if (mobileMenu?.classList.contains('open')) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  });
   menuClose?.addEventListener('click', closeMenu);
   menuLinks.forEach(link => link.addEventListener('click', closeMenu));
 
