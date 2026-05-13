@@ -280,18 +280,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuSections     = document.querySelectorAll('.menu-section[id]');
 
   if (menuSidebarLinks.length && menuSections.length) {
+    let scrollSpyTimeout = null;
+
     const spyObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
+        if (!entry.isIntersecting) return;
+        clearTimeout(scrollSpyTimeout);
+        scrollSpyTimeout = setTimeout(() => {
           const id = entry.target.id;
           menuSidebarLinks.forEach(link => {
             const isActive = link.getAttribute('href') === `#${id}`;
             link.classList.toggle('active', isActive);
             if (isActive && window.innerWidth <= 767) {
-              link.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+              const sidebar = link.closest('.menu-sidebar');
+              if (sidebar) {
+                const targetScrollLeft = link.offsetLeft - (sidebar.offsetWidth / 2) + (link.offsetWidth / 2);
+                sidebar.scrollTo({ left: targetScrollLeft, behavior: 'smooth' });
+              }
             }
           });
-        }
+        }, 80);
       });
     }, { rootMargin: '-30% 0px -60% 0px' });
 
