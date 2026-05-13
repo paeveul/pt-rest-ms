@@ -260,6 +260,7 @@ body {
 }
 
 #mobile-menu-close {
+  display: none;
   position: absolute;
   top: 28px;
   right: 48px;
