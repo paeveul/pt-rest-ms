@@ -285,7 +285,11 @@ document.addEventListener('DOMContentLoaded', () => {
         if (entry.isIntersecting) {
           const id = entry.target.id;
           menuSidebarLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            const isActive = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('active', isActive);
+            if (isActive && window.innerWidth <= 767) {
+              link.scrollIntoView({ inline: 'center', block: 'nearest', behavior: 'smooth' });
+            }
           });
         }
       });

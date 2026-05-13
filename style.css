@@ -758,6 +758,11 @@ body {
   margin-bottom: 48px;
 }
 
+/* Menu mobile footer block — hidden on desktop, shown on mobile via media query */
+.menu-mobile-footer-block {
+  display: none;
+}
+
 /* ── Menu Page ─────────────────────────────────────────────── */
 .menu-layout {
   display: grid;
@@ -1627,36 +1632,76 @@ footer {
     padding: 16px;
   }
 
-  /* Menu sidebar — already hidden on mobile via .menu-layout stacking (1024px)
-     but at ≤767px, reinforce sidebar is not sticky and not occupying space */
+  /* Menu sidebar — sticky horizontal scroll tab bar on mobile */
   .menu-sidebar {
-    position: static;
+    position: sticky;
+    top: 64px;
+    z-index: 100;
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: var(--color-bg);
+    border-left: none;
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 24px;
+    margin-left: -24px;
+    width: 100vw;
+    margin-bottom: 32px;
   }
 
-  /* Menu sidebar links — treat as a horizontal scroll list on mobile */
-  .menu-sidebar {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    border-left: none;
-    padding-left: 0;
-  }
+  .menu-sidebar::-webkit-scrollbar { display: none; }
+
+  /* Hide dietary note + Reserve CTA from sidebar on mobile — shown in footer block instead */
+  .menu-sidebar > div { display: none; }
 
   .menu-sidebar-link {
     border-left: none;
-    border: 1px solid var(--color-border);
-    padding: 8px 14px;
-    padding-left: 14px;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 14px 16px;
     font-size: 11px;
-    min-height: 40px;
+    min-height: 48px;
     display: flex;
     align-items: center;
+    flex-shrink: 0;
+    white-space: nowrap;
   }
 
   .menu-sidebar-link:hover,
   .menu-sidebar-link.active {
-    border-color: var(--color-gold);
+    border-color: transparent;
+    border-bottom-color: var(--color-gold);
+    color: var(--color-gold);
   }
+
+  /* Menu mobile footer block — show on mobile */
+  .menu-mobile-footer-block {
+    display: block;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Menu intro row — stack on mobile */
+  .menu-intro-row {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 28px !important;
+    margin-bottom: 40px !important;
+  }
+
+  .menu-intro-row .btn-ghost {
+    margin-left: 0 !important;
+    width: 100%;
+    min-height: 52px;
+    justify-content: center;
+  }
+
+  /* Scroll padding to account for fixed nav + sticky tab bar */
+  html { scroll-padding-top: 120px; }
 
   /* Menu section bottom margin */
   .menu-section { margin-bottom: 48px; }
