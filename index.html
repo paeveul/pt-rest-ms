@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurum — Modern Malaysian Fine Dining, Kuala Lumpur</title>
+  <meta name="description" content="Aurum is Kuala Lumpur's premier modern Malaysian fine dining destination. Located on Level 23, Menara KLCC. Reserve your table today." />
+  <meta name="keywords" content="fine dining KL, Kuala Lumpur fine dining, modern Malaysian cuisine, KLCC restaurant, luxury restaurant Malaysia" />
+  <link rel="canonical" href="https://aurum.com.my/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="restaurant" />
+  <meta property="og:title"       content="Aurum — Modern Malaysian Fine Dining" />
+  <meta property="og:description" content="Where Every Moment Is Crafted. Fine dining at Level 23, Menara KLCC, Kuala Lumpur." />
+  <meta property="og:url"         content="https://aurum.com.my/" />
+  <meta property="og:image"       content="https://aurum.com.my/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Aurum — Modern Malaysian Fine Dining" />
+  <meta name="twitter:description" content="Where Every Moment Is Crafted. Fine dining at Level 23, Menara KLCC, Kuala Lumpur." />
+  <meta name="twitter:image"       content="https://aurum.com.my/images/og-image.jpg" />
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Aurum",
+    "url": "https://aurum.com.my",
+    "email": "reservations@aurum.com.my",
+    "telephone": "+60321234567",
+    "servesCuisine": "Modern Malaysian",
+    "priceRange": "$$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Level 23, Menara KLCC",
+      "addressLocality": "Kuala Lumpur",
+      "postalCode": "50088",
+      "addressCountry": "MY"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "19:00",
+        "closes": "23:00"
+      }
+    ],
+    "areaServed": "Kuala Lumpur, Malaysia"
+  }
+  </script>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GA_MEASUREMENT_ID');
+  </script>
+
+  <!-- Microsoft Clarity -->
+  <script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "CLARITY_PROJECT_ID");
+  </script>
+
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+
+<!-- Scroll Progress -->
+<div id="scroll-progress"></div>
+
+<!-- Custom Cursor -->
+<div id="cursor-dot"></div>
+<div id="cursor-ring"></div>
+
+<!-- ── Navigation ───────────────────────────────────────── -->
+<nav id="main-nav" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">Aurum</a>
+
+  <ul class="nav-links nav-desktop" role="list">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="gallery.html">Gallery</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="reservations.html" class="nav-reserve">Reserve</a></li>
+  </ul>
+
+  <button id="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+</nav>
+
+<!-- Mobile Menu -->
+<div id="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
+  <button id="mobile-menu-close" aria-label="Close menu">Close</button>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="menu.html">Menu</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="about.html">About</a>
+    <a href="reservations.html">Reserve</a>
+  </nav>
+</div>
+
+<!-- ── Hero ──────────────────────────────────────────────── -->
+<header class="hero" role="banner">
+  <div class="hero-bg" style="background-image: url('assets/images/customers-dining.webp');"></div>
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Fine Dining &middot; Kuala Lumpur</p>
+    <h1 class="hero-title">
+      <span class="word-wrap"><span class="word">Aurum</span></span>
+    </h1>
+    <p class="hero-subtitle">Where Every Moment Is Crafted</p>
+    <div class="hero-buttons">
+      <a href="reservations.html" class="btn-gold"
+         onclick="gtag('event','whatsapp_click',{event_category:'CTA',event_label:'hero_reserve'})">
+        Reserve a Table
+      </a>
+      <a href="menu.html" class="btn-ghost">View Menu</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span>
+    <svg class="scroll-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </div>
+</header>
+
+<!-- ── Signature Dishes ───────────────────────────────────── -->
+<section class="section-pad" aria-labelledby="dishes-heading">
+  <div class="container" style="padding-left:0;padding-right:0;">
+    <div class="container">
+      <p class="section-label reveal">Tasting Collection</p>
+      <h2 id="dishes-heading" class="section-title reveal">Signature Creations</h2>
+      <div class="section-rule reveal"></div>
+    </div>
+  </div>
+
+  <div class="dish-strip-outer">
+    <div class="dish-strip" id="dish-strip" role="list" aria-label="Signature dishes">
+
+      <article class="dish-card" role="listitem">
+        <img src="assets/images/nice-cooked-pasta.webp"
+             alt="Handmade rice noodles in lemongrass-infused broth with confit duck"
+             class="dish-card-img" loading="lazy" />
+        <div class="dish-card-info">
+          <p class="dish-card-name">Lemongrass Duck Noodles</p>
+          <p class="dish-card-category">Signature Main</p>
+        </div>
+      </article>
+
+      <article class="dish-card" role="listitem">
+        <img src="assets/images/appetizers.webp"
+             alt="Amuse-bouche selection of seasonal Malaysian ingredients"
+             class="dish-card-img" loading="lazy" />
+        <div class="dish-card-info">
+          <p class="dish-card-name">Seasonal Amuse-Bouche</p>
+          <p class="dish-card-category">Opening Course</p>
+        </div>
+      </article>
+
+      <article class="dish-card" role="listitem"
+               onclick="gtag('event','package_view',{event_category:'Dish',event_label:'chicken_rendang'})">
+        <img src="assets/images/chicken-and-rice.webp"
+             alt="Slow-braised rendang chicken with compressed coconut rice"
+             class="dish-card-img" loading="lazy" />
+        <div class="dish-card-info">
+          <p class="dish-card-name">Rendang Chicken & Compressed Rice</p>
+          <p class="dish-card-category">Chef's Selection</p>
+        </div>
+      </article>
+
+      <article class="dish-card" role="listitem"
+               onclick="gtag('event','package_view',{event_category:'Dish',event_label:'spiced_lamb'})">
+        <img src="assets/images/chicken-dih.webp"
+             alt="Spiced turmeric lamb with ulam herb salad and tamarind reduction"
+             class="dish-card-img" loading="lazy" />
+        <div class="dish-card-info">
+          <p class="dish-card-name">Turmeric Lamb & Ulam</p>
+          <p class="dish-card-category">Seasonal Main</p>
+        </div>
+      </article>
+
+      <article class="dish-card" role="listitem">
+        <img src="assets/images/pekobowl-bg.webp"
+             alt="Pandan chiffon with salted egg caramel and coconut sorbet"
+             class="dish-card-img" loading="lazy" />
+        <div class="dish-card-info">
+          <p class="dish-card-name">Pandan Chiffon & Coconut</p>
+          <p class="dish-card-category">Dessert</p>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── About Snippet ──────────────────────────────────────── -->
+<section class="section-pad" style="background-color: var(--color-bg-2); border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);" aria-labelledby="about-snippet-heading">
+  <div class="container">
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+      <div class="reveal" style="overflow:hidden;">
+        <img src="assets/images/kitchen-crew.webp"
+             alt="Aurum's culinary team at work in our open kitchen"
+             loading="lazy"
+             style="width:100%; height:560px; object-fit:cover; display:block;" />
+      </div>
+      <div class="reveal">
+        <p class="section-label">Our Philosophy</p>
+        <h2 id="about-snippet-heading" class="sr-only">About Aurum</h2>
+        <blockquote class="about-quote">
+          "We believe a meal is not just sustenance&thinsp;—&thinsp;it is memory."
+        </blockquote>
+        <p style="font-family:'Karla',sans-serif; font-size:15px; font-weight:300; color:var(--color-text-muted); line-height:1.8; margin-bottom:40px;">
+          At Aurum, we draw on Malaysia's extraordinary culinary heritage — its spice routes, its kampung kitchens, its coastal abundance — and reinterpret it through a contemporary lens. Every dish on our menu tells a story rooted in provenance, executed with precision, and served with quiet ceremony.
+        </p>
+        <a href="about.html" class="link-arrow">
+          Our Story
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Testimonials ───────────────────────────────────────── -->
+<section class="section-pad" aria-labelledby="testimonials-heading">
+  <div class="container">
+    <p class="section-label reveal" style="text-align:center;">Guest Reflections</p>
+    <h2 id="testimonials-heading" class="section-title reveal" style="text-align:center;">What Our Guests Say</h2>
+    <div class="section-rule reveal" style="margin:0 auto 64px;"></div>
+
+    <div class="reveal-children" style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;">
+
+      <article class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">
+          "The duck noodles were nothing short of extraordinary. Aurum is redefining what Malaysian fine dining can be."
+        </blockquote>
+        <p class="testimonial-name">Priya Menon &mdash; Singapore</p>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">
+          "The space, the service, the food — every element felt considered. One of the finest dining experiences I have had anywhere in Asia."
+        </blockquote>
+        <p class="testimonial-name">Daniel Cheah &mdash; Kuala Lumpur</p>
+      </article>
+
+      <article class="testimonial-card">
+        <div class="stars" aria-label="5 out of 5 stars">
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg class="star-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+        <blockquote class="testimonial-quote">
+          "Chef Razif's approach to Malaysian ingredients is visionary. The rendang lamb is unlike anything I have tasted."
+        </blockquote>
+        <p class="testimonial-name">Amira Zahari &mdash; Kuala Lumpur</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── Reservation CTA Banner ─────────────────────────────── -->
+<section class="cta-banner reveal" aria-labelledby="cta-heading">
+  <p class="section-label" style="margin-bottom:16px;">Plan Your Visit</p>
+  <h2 id="cta-heading" class="cta-banner-title">Reserve Your Table</h2>
+  <p class="cta-banner-sub">Tuesday through Sunday &nbsp;|&nbsp; Lunch 12–3pm &nbsp;|&nbsp; Dinner 7–11pm</p>
+  <a href="reservations.html" class="btn-gold">Make a Reservation</a>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-rule"></div>
+  <div style="padding: 80px 48px 48px; text-align:center;">
+    <a href="index.html" class="footer-logo">Aurum</a>
+    <p class="footer-tagline" style="margin-top:12px; margin-bottom:48px;">Where Every Moment Is Crafted</p>
+
+    <ul class="footer-nav" role="list" style="margin-bottom:48px;">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="reservations.html">Reservations</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <p class="footer-copy">
+      &copy; 2025 Aurum &nbsp;&mdash;&nbsp;
+      <a href="mailto:reservations@aurum.com.my" class="footer-copy"
+         style="color:var(--color-gold); text-decoration:none;"
+         onclick="gtag('event','email_click',{event_category:'Footer',event_label:'reservations_email'})">
+        reservations@aurum.com.my
+      </a>
+    </p>
+  </div>
+</footer>
+
+<!-- ── Floating WhatsApp ───────────────────────────────────── -->
+<a id="whatsapp-float"
+   href="https://wa.me/60321234567"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Chat with us on WhatsApp"
+   onclick="gtag('event','whatsapp_click',{event_category:'CTA',event_label:'floating_whatsapp'})">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

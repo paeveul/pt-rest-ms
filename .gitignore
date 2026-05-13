@@ -1,0 +1,6 @@
+.claude/
+not-for-github/
+assets/images/not-for-github/
+node_modules/
+.DS_Store
+Thumbs.db
